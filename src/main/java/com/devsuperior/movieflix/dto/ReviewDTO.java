@@ -17,6 +17,18 @@ public class ReviewDTO {
     private String userName;
     private String userEmail;
     
+    public ReviewDTO() {}
+    
+	public ReviewDTO(Long id, String text, Long movieId, Long userId, String userName, String userEmail) {
+		this.id = id;
+		this.text = text;
+		this.movieId = movieId;
+		this.userId = userId;
+		this.userName = userName;
+		this.userEmail = userEmail;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
