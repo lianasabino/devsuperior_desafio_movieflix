@@ -39,21 +39,5 @@ public class ReviewService {
 		return new ReviewDTO(review);
 	}
 	
-//	@Transactional
-//	public ReviewDTO insert(ReviewDTO dto) {
-//		Review entity = new Review();
-//		entity.setText(dto.getText());
-//		System.out.println("movieId " + dto.getMovieId());
-//	    Movie movie = movieRepository.findById(dto.getMovieId())
-//	            .orElseThrow(() -> new RuntimeException("Filme não encontrado"));
-//	    entity.setMovie(movie);
-//	    System.out.println("userId " + dto.getUserId());
-//	    User user = userRepository.findById(dto.getUserId()).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
-//	    entity.setUser(user);
-//	    
-//		entity = reviewRepository.save(entity);
-//		return new ReviewDTO(entity);	
-//
-//	}
 	
 }
