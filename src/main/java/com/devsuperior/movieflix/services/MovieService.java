@@ -26,22 +26,6 @@ public class MovieService {
 	@Autowired
 	private MovieRepository movieRepository;
 	
-//	@Transactional(readOnly = true)
-//	public Page<MovieCardDTO> FindByGenre(String genreId, Pageable pageable) {
-//		
-//		List<Long> genreIds = new ArrayList<>();
-//
-//		if(!"0".equals(genreId)) {
-//			String[] vet = genreId.split(",");
-//			List<String> list = Arrays.asList(vet);
-//			genreIds = list.stream().map(x -> Long.parseLong(x)).toList();		
-//		}
-//		
-//		Page<Movie> obj = movieRepository.searchMoviesWithGenres(genreIds, pageable);
-//		
-//		
-//	}
-	
 	@Transactional(readOnly = true)
 	public Page<MovieCardDTO> findByGenre(Pageable pageable) {
 		Page<Movie> list = movieRepository.findAll(pageable);
